@@ -1,0 +1,40 @@
+{
+  "name": "legal-diff-demo",
+  "version": "1.0.0",
+  "description": "This is a demonstration of a diff tool for Japanese legal documents.",
+  "main": "index.js",
+  "scripts": {
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "preview": "vite preview",
+    "typecheck": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remix-run/dev": "^2.17.0",
+    "@remix-run/node": "^2.17.0",
+    "@remix-run/react": "^2.17.0",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.11"
+  }
+}
