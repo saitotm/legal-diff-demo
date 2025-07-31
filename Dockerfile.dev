@@ -1,0 +1,20 @@
+# Node.js 18 Alpine Linux版を使用
+FROM node:18-alpine
+
+# 作業ディレクトリを設定
+WORKDIR /app
+
+# パッケージファイルをコピー
+COPY package*.json ./
+
+# 依存関係をインストール（開発環境用）
+RUN npm ci
+
+# アプリケーションのソースコードをコピー
+COPY . .
+
+# ポート3000を公開
+EXPOSE 3000
+
+# 開発サーバーを起動
+CMD ["npm", "run", "dev"]

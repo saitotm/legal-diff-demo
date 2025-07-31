@@ -7,4 +7,12 @@ export default defineConfig({
       ssr: false,
     }),
   ],
+  server: {
+    host: true, // Docker環境で外部からアクセス可能にする
+    port: 3000,
+  },
+  preview: {
+    host: true,
+    port: 3000,
+  },
 });
