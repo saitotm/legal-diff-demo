@@ -9,7 +9,7 @@
     "dev": "remix vite:dev",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "preview": "vite preview --host --port 3000",
+    "preview": "vite preview --host --port 3000 --outDir build/client",
     "typecheck": "tsc"
   },
   "keywords": [],
