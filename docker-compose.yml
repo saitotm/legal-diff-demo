@@ -5,11 +5,9 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-    volumes:
-      # 開発時のホットリロード用（本番環境では不要）
-      - .:/app
-      - /app/node_modules
     restart: unless-stopped
+    profiles:
+      - production
 
   # 開発用サービス（開発時に使用）
   legal-diff-demo-dev:
