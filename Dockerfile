@@ -30,7 +30,6 @@ RUN npm ci --only=production
 
 # ビルド成果物をコピー
 COPY --from=builder /app/build ./build
-COPY --from=builder /app/public ./public
 
 # ポート3000を公開
 EXPOSE 3000

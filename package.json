@@ -2,13 +2,14 @@
   "name": "legal-diff-demo",
   "version": "1.0.0",
   "description": "This is a demonstration of a diff tool for Japanese legal documents.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "preview": "vite preview",
+    "preview": "vite preview --host --port 3000",
     "typecheck": "tsc"
   },
   "keywords": [],

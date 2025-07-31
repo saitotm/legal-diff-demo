@@ -7,7 +7,7 @@ import parser from "@typescript-eslint/parser";
 export default [
   js.configs.recommended,
   {
-    ignores: ["postcss.config.js", "node_modules/"],
+    ignores: ["node_modules/"],
   },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
