@@ -35,30 +35,28 @@
 .vertical-text-container {
   flex: 1;
   writing-mode: vertical-rl;
-  text-orientation: mixed;
+  text-orientation: upright;
   font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', serif;
   font-size: 14px;
-  line-height: 1.8;
-  letter-spacing: 0.1em;
+  line-height: 1.4;
+  letter-spacing: normal;
   padding: 20px;
   overflow-x: auto;
   overflow-y: hidden;
   display: block;
   direction: rtl;
-  text-align: justify;
 }
 
 /* 縦書きテキストの列 */
 .vertical-column {
   writing-mode: vertical-rl;
-  text-orientation: mixed;
+  text-orientation: upright;
   display: inline-block;
   width: auto;
   min-width: 250px;
   max-width: 400px;
-  margin: 0 20px;
+  margin: 0 15px;
   padding: 0;
-  text-align: justify;
   height: 100%;
   vertical-align: top;
 }
@@ -67,31 +65,28 @@
 .article-title {
   font-weight: bold;
   font-size: 16px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   text-align: center;
   writing-mode: vertical-rl;
-  text-orientation: mixed;
+  text-orientation: upright;
 }
 
 /* 通常テキスト */
 .article-content {
-  line-height: 1.9;
-  text-align: justify;
+  line-height: 1.4;
   writing-mode: vertical-rl;
-  text-orientation: mixed;
-  margin-bottom: 1.5em;
-  word-break: keep-all;
-  overflow-wrap: break-word;
+  text-orientation: upright;
+  margin-bottom: 0.8em;
+  letter-spacing: normal;
 }
 
 /* 項目番号（一、二、三など） */
 .list-item-vertical {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   text-indent: 1em;
   writing-mode: vertical-rl;
-  text-orientation: mixed;
-  line-height: 1.8;
-  word-break: keep-all;
-  overflow-wrap: break-word;
+  text-orientation: upright;
+  line-height: 1.4;
+  letter-spacing: normal;
 }
 
