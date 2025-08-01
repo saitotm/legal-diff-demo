@@ -37,37 +37,37 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', serif;
-  font-size: 13px;
-  line-height: 1.7;
-  letter-spacing: 0.08em;
-  padding: 15px 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-  align-items: stretch;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  padding: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: block;
   direction: rtl;
+  text-align: justify;
 }
 
 /* 縦書きテキストの列 */
 .vertical-column {
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  display: inline-block;
   width: auto;
-  min-width: 200px;
-  max-width: 300px;
-  margin: 0 15px;
-  padding: 10px;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 0 20px;
+  padding: 0;
   text-align: justify;
   height: 100%;
-  overflow: hidden;
+  vertical-align: top;
 }
 
 /* 条文番号のスタイル */
 .article-title {
   font-weight: bold;
-  font-size: 15px;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 1em;
   text-align: center;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -75,19 +75,23 @@
 
 /* 通常テキスト */
 .article-content {
-  line-height: 1.8;
+  line-height: 1.9;
   text-align: justify;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  margin-bottom: 15px;
+  margin-bottom: 1.5em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* 項目番号（一、二、三など） */
 .list-item-vertical {
-  margin-bottom: 12px;
+  margin-bottom: 1em;
   text-indent: 1em;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  line-height: 1.6;
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
