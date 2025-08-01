@@ -1,177 +1,106 @@
 @import "tailwindcss";
 
-/* 縦書きレイアウトのスタイル */
-.vertical-document-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 600px;
-  max-width: 800px;
+/* 法的文書の横線3本レイアウト（上端・中央・下端の3本線で上下2領域） */
+.legal-document-layout {
+  width: 100%;
+  max-width: 1200px;
+  height: 700px;
   margin: 0 auto;
-  padding: 3rem;
   background-color: #ffffff;
-  border: 3px solid #000000;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
   position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.vertical-text {
+/* 中央の横線で上下2領域に分割 */
+.horizontal-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 340px;
+}
+
+/* 上部セクションと下部セクションの間に中央線 */
+.horizontal-section:first-child {
+  border-bottom: 3px solid #000000;
+}
+
+/* 縦書きテキストコンテナ */
+.vertical-text-container {
+  flex: 1;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  direction: rtl;
   font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', serif;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.1em;
-  max-height: 600px;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 2rem;
-  border: 2px solid #333333;
-  background-color: #ffffff;
-  position: relative;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  padding: 15px 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: stretch;
+  direction: rtl;
+}
+
+/* 縦書きテキストの列 */
+.vertical-column {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  width: auto;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 0 15px;
+  padding: 10px;
   text-align: justify;
-}
-
-/* 内部罫線 - 複数の縦線を追加 */
-.vertical-text::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 33%;
-  width: 1px;
+  border-left: 1px solid #ddd;
   height: 100%;
-  background-color: #999999;
-  transform: translateX(-50%);
+  overflow: hidden;
 }
 
-.vertical-text::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 66%;
-  width: 1px;
-  height: 100%;
-  background-color: #999999;
-  transform: translateX(-50%);
+.vertical-column:first-child {
+  border-left: none;
 }
 
-/* 中央の主要区切り線 */
-.vertical-text {
-  background: linear-gradient(to left, 
-    transparent 0%, 
-    transparent 48%, 
-    #cccccc 49%, 
-    #cccccc 51%, 
-    transparent 52%, 
-    transparent 100%);
-}
-
-/* 条文セクションのスタイル - 階層1 */
-.article-section {
-  border-bottom: 2px solid #000000;
-  border-top: 1px solid #666666;
-  padding: 1rem 0;
-  margin-bottom: 2rem;
-  background: linear-gradient(to right, 
-    rgba(0,0,0,0.02) 0%, 
-    rgba(0,0,0,0.05) 50%, 
-    rgba(0,0,0,0.02) 100%);
-}
-
-/* 条文番号 - 最高階層 */
-.article-number {
+/* 条文番号のスタイル */
+.article-title {
   font-weight: bold;
-  font-size: 1.3em;
-  margin-bottom: 1em;
-  color: #000000;
-  border-left: 4px solid #000000;
-  border-bottom: 1px solid #000000;
-  padding: 0.5em;
-  background-color: rgba(0,0,0,0.03);
-  position: relative;
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
-.article-number::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -2px;
-  width: 2px;
-  height: 100%;
-  background-color: #333333;
+/* 通常テキスト */
+.article-content {
+  line-height: 1.8;
+  text-align: justify;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin-bottom: 15px;
 }
 
-/* リスト項目のスタイル - 階層2 */
-.list-item {
-  margin-left: 3em;
-  text-indent: -2em;
-  padding: 0.8em 1em;
-  border-left: 2px solid #666666;
-  border-bottom: 1px dotted #999999;
-  margin-bottom: 1em;
-  background: linear-gradient(to right, 
-    rgba(102,102,102,0.05) 0%, 
-    transparent 100%);
-  position: relative;
+/* 項目番号（一、二、三など） */
+.list-item-vertical {
+  margin-bottom: 12px;
+  text-indent: 1em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: 1.6;
 }
 
-.list-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+/* 縦線の区切り */
+.vertical-divider {
   width: 1px;
-  height: 100%;
-  background-color: #333333;
-}
-
-/* 通常テキストのスタイル - 階層3 */
-.normal-text {
-  margin-bottom: 1.2em;
-  padding: 0.6em 1em;
-  border-left: 1px solid #cccccc;
-  background: linear-gradient(to right, 
-    rgba(204,204,204,0.02) 0%, 
-    transparent 100%);
-}
-
-/* 外枠の詳細罫線 */
-.vertical-document-container::before,
-.vertical-document-container::after {
-  content: '';
-  position: absolute;
-  background-color: #000000;
-}
-
-/* 右側の縦罫線 */
-.vertical-document-container::before {
-  top: 0;
-  right: 0;
-  width: 3px;
-  height: 100%;
-}
-
-/* 下側の横罫線 */
-.vertical-document-container::after {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-}
-
-/* 追加の装飾罫線 */
-.vertical-document-container {
-  border-left: 3px solid #000000;
-  border-top: 3px solid #000000;
-}
-
-/* コーナーの装飾 */
-.vertical-document-container::before {
-  box-shadow: inset -2px 0 0 #333333;
-}
-
-.vertical-document-container::after {
-  box-shadow: inset 0 2px 0 #333333;
+  background-color: #999999;
+  margin: 15px 5px;
+  min-height: 80%;
+  align-self: center;
 }
