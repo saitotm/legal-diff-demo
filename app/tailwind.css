@@ -59,13 +59,8 @@
   margin: 0 15px;
   padding: 10px;
   text-align: justify;
-  border-left: 1px solid #ddd;
   height: 100%;
   overflow: hidden;
-}
-
-.vertical-column:first-child {
-  border-left: none;
 }
 
 /* 条文番号のスタイル */
@@ -96,11 +91,3 @@
   line-height: 1.6;
 }
 
-/* 縦線の区切り */
-.vertical-divider {
-  width: 1px;
-  background-color: #999999;
-  margin: 15px 5px;
-  min-height: 80%;
-  align-self: center;
-}
