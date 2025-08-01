@@ -34,7 +34,6 @@
 /* 縦書きテキストコンテナ */
 .vertical-text-container {
   flex: 1;
-  writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', serif;
   font-size: 14px;
