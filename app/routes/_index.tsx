@@ -36,11 +36,9 @@ export default function Index() {
           <div className="horizontal-section">
             <div className="vertical-text-container">
               <div className="vertical-column">
-                <div className="article-title">第一条</div>
                 <div className="article-content">{originalText.article1}</div>
               </div>
               <div className="vertical-column">
-                <div className="article-title">第二条</div>
                 <div className="article-content">{originalText.article2}</div>
                 <div className="list-item-vertical">{originalText.item1}</div>
                 <div className="list-item-vertical">{originalText.item2}</div>
@@ -52,11 +50,9 @@ export default function Index() {
           <div className="horizontal-section">
             <div className="vertical-text-container">
               <div className="vertical-column">
-                <div className="article-title">第一条</div>
                 <div className="article-content">{modifiedText.article1}</div>
               </div>
               <div className="vertical-column">
-                <div className="article-title">第二条</div>
                 <div className="article-content">{modifiedText.article2}</div>
                 <div className="list-item-vertical">{modifiedText.item1}</div>
                 <div className="list-item-vertical">{modifiedText.item2}</div>
