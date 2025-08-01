@@ -63,10 +63,7 @@
 
 /* 条文番号のスタイル */
 .article-title {
-  font-weight: bold;
-  font-size: 16px;
   margin-bottom: 0.5em;
-  text-align: center;
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
