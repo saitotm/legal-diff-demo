@@ -7,10 +7,8 @@
   height: 700px;
   margin: 0 auto;
   background-color: #ffffff;
-  border-top: 3px solid #000000;
-  border-bottom: 3px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -28,7 +26,7 @@
 
 /* 上部セクションと下部セクションの間に中央線 */
 .horizontal-section:first-child {
-  border-bottom: 3px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 
 /* 縦書きテキストコンテナ */
