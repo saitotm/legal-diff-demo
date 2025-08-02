@@ -1,3 +1,78 @@
 @import "tailwindcss";
 
-/* カスタムスタイルがあればここに追加 */
+/* 法的文書の横線3本レイアウト（上端・中央・下端の3本線で上下2領域） */
+.legal-document-layout {
+  width: 100%;
+  max-width: 500px;
+  height: 650px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 中央の横線で上下2領域に分割 */
+.horizontal-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 300px;
+}
+
+/* 上部セクションと下部セクションの間に中央線 */
+.horizontal-section:first-child {
+  border-bottom: 1px solid #000000;
+}
+
+/* 縦書きテキストコンテナ */
+.vertical-text-container {
+  flex: 1;
+  text-orientation: upright;
+  font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', serif;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  padding-top: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* 縦書きテキストの列 */
+.vertical-column {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0 5px;
+  padding: 0;
+  height: 100%;
+}
+
+/* 通常テキスト */
+.article-content {
+  line-height: 1.4;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: normal;
+  text-indent: -1em;
+}
+
+/* 項目番号（一、二、三など） */
+.list-item-vertical {
+  text-indent: -1em;
+  padding-top: 1em;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+
