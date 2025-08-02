@@ -1,27 +1,37 @@
-import type { MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from '@remix-run/react';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Legal Diff Demo" },
-    { name: "description", content: "日本の法的文書の差分ツールのデモ" },
+    { title: 'Legal Diff Demo' },
+    { name: 'description', content: '日本の法的文書の差分ツールのデモ' },
   ];
 };
 
 export default function Index() {
   // 上部に表示する法律文（原文）
   const originalText = {
-    article1: "第一条\u3000この法律は、個人の権利利益を保護するため、個人情報の適正な取扱いに関し、基本理念及び政府による基本方針の作成その他の個人情報の保護に関する施策の基本となる事項を定め、国及び地方公共団体の責務等を明らかにするとともに、個人情報取扱事業者等が遵守すべき義務等を定めることにより、個人情報の適正かつ効果的な活用が新たな産業の創出並びに活力ある経済社会及び豊かな国民生活の実現に資することを旨として、個人情報の保護を図ることを目的とする。",
-    article2: "第二条\u3000この法律において「個人情報」とは、生存する個人に関する情報であって、次の各号のいずれかに該当するものをいう。",
-    item1: "一\u3000当該情報に含まれる氏名、生年月日その他の記述等により特定の個人を識別することができるもの（他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものを含む。）",
-    item2: "二\u3000個人識別符号が含まれるもの"
+    article1: '第百五条\u3000〔略〕',
+    article2:
+      '２\u3000前項の規定により諮問をした行政機関の長等は、次に掲げる者に対し、諮問をした旨を通知しなければならない。',
+    item1:
+      '一\u3000審査請求人及び参加人（行政不服審査法第十三条第四項に規定する参加人をいう。以下この項及び第百七条第二号において同じ。）',
+    item2:
+      '二\u3000開示請求者、訂正請求者又は利用停止請求者（これらの者が審査請求人又は参加人である場合を除く。）',
+    item3:
+      '三\u3000当該審査請求に係る保有個人情報の開示について反対意見書を提出した第三者（当該第三者が審査請求人又は参加人である場合を除く。）',
   };
 
   // 下部に表示する法律文（修正版）
   const modifiedText = {
-    article1: "第一条\u3000この法律は、個人の権利利益を保護するため、個人情報の適正な取扱いに関し、基本理念及び政府による基本方針の作成その他の個人情報の保護に関する施策の基本となる事項を定め、国及び地方公共団体の責務等を明らかにするとともに、個人情報取扱事業者等が遵守すべき義務等を定めることにより、個人情報の適正かつ効果的な活用が新たな産業の創出並びに活力ある経済社会及び豊かな国民生活の実現に資することを旨として、個人情報の保護を図ることを目的とする。",
-    article2: "第二条\u3000この法律において「個人情報」とは、生存する個人に関する情報であって、次の各号のいずれかに該当するものをいう。",
-    item1: "一\u3000当該情報に含まれる氏名、生年月日その他の記述等により特定の個人を識別することができるもの（他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものを含む。）",
-    item2: "二\u3000個人識別符号が含まれるもの"
+    article1: '第百五条\u3000〔略〕',
+    article2:
+      '２\u3000前項の規定により諮問をした行政機関の長等は、次に掲げる者に対し、諮問をした旨を通知しなければならない。',
+    item1:
+      '一\u3000審査請求人及び参加人（行政不服審査法第十三条第四項に規定する参加人をいう。以下この項及び第百七条第一項第二号において同じ。）',
+    item2:
+      '二\u3000開示請求者、訂正請求者又は利用停止請求者（これらの者が審査請求人又は参加人である場合を除く。）',
+    item3:
+      '三\u3000当該審査請求に係る保有個人情報の開示について反対意見書を提出した第三者（当該第三者が審査請求人又は参加人である場合を除く。）',
   };
 
   return (
@@ -30,7 +40,7 @@ export default function Index() {
         <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           法的文書縦書きレイアウト デモ
         </h1>
-        
+
         <div className="legal-document-layout">
           {/* 上部セクション - 原文 */}
           <div className="horizontal-section">
@@ -42,6 +52,7 @@ export default function Index() {
                 <div className="article-content">{originalText.article2}</div>
                 <div className="list-item-vertical">{originalText.item1}</div>
                 <div className="list-item-vertical">{originalText.item2}</div>
+                <div className="list-item-vertical">{originalText.item3}</div>
               </div>
             </div>
           </div>
@@ -56,6 +67,7 @@ export default function Index() {
                 <div className="article-content">{modifiedText.article2}</div>
                 <div className="list-item-vertical">{modifiedText.item1}</div>
                 <div className="list-item-vertical">{modifiedText.item2}</div>
+                <div className="list-item-vertical">{modifiedText.item3}</div>
               </div>
             </div>
           </div>
