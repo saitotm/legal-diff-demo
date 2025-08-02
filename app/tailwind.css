@@ -54,9 +54,7 @@
   text-orientation: upright;
   flex: 0 0 auto;
   width: auto;
-  min-width: 250px;
-  max-width: 400px;
-  margin: 0 15px;
+  margin: 0 5px;
   padding: 0;
   height: 100%;
 }
