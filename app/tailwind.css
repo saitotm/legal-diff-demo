@@ -71,6 +71,8 @@
   text-orientation: upright;
   margin-bottom: 0.8em;
   letter-spacing: normal;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 
 /* 項目番号（一、二、三など） */
