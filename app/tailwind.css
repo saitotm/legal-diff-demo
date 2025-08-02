@@ -78,7 +78,7 @@
 .list-item-vertical {
   margin-bottom: 0.5em;
   text-indent: -1em;
-  padding-left: 1em;
+  padding-top: 1em;
   writing-mode: vertical-rl;
   text-orientation: upright;
   line-height: 1.4;
